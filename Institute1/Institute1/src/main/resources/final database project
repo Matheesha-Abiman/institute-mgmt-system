@@ -1,0 +1,179 @@
+CREATE TABLE Admin (
+    admin_id VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARBINARY(255) NOT NULL
+);
+
+create table Staff(
+ staff_id varchar(10) primary key,
+ admin_id varchar(10) not null,
+ name varchar(50) not null,
+ email varchar(100) not null unique,
+ description varchar(255),
+ salary double(10,2),
+ foreign key (admin_id) references Admin (admin_id) on update cascade on delete cascade
+);
+
+create table Course(
+ course_id varchar(10) primary key,
+ admin_id varchar(10) not null,
+ name varchar(50) not null,
+ fee double(8,2) not null,
+ description varchar(255),
+ foreign key (admin_id) references Admin (admin_id) on update cascade on delete cascade
+);
+
+create table Parent(
+ parent_id varchar(10) primary key,
+ admin_id varchar(10) not null,
+ name varchar(50) not null,
+ email varchar(100) not null unique,
+ foreign key (admin_id) references Admin (admin_id) on update cascade on delete cascade
+);
+
+create table Student(
+ student_id varchar(10) primary key,
+ admin_id varchar(10) not null,
+ parent_id varchar(10) not null,
+ name varchar(50) not null,
+ address varchar(100) not null,
+ dob date not null,
+ foreign key (admin_id) references Admin (admin_id) on update cascade on delete cascade,
+ foreign key (parent_id) references Parent (parent_id) on update cascade on delete cascade
+);
+
+create table Student_course(
+ student_id varchar(10) not null,
+ course_id varchar(10) not null,
+ foreign key (student_id) references Student (student_id) on update cascade on delete cascade,
+ foreign key (course_id) references Course (course_id) on update cascade on delete cascade
+);
+
+create table Payment(
+ payment_id varchar(10) primary key,
+ admin_id varchar(10) not null,
+ student_id varchar(10) not null,
+ payment_date date not null,
+ amount double(8,2) not null,
+ foreign key (admin_id) references Admin (admin_id) on update cascade on delete cascade,
+ foreign key (student_id) references Student (student_id) on update cascade on delete cascade
+);
+
+create table Module(
+ module_id varchar(10) primary key, 
+ course_id varchar(10) not null,
+ module_name varchar(100) not null,
+ foreign key (course_id) references Course (course_id) on update cascade on delete cascade
+);
+
+create table Lecture(
+ lecture_id varchar(10) primary key,
+ module_id varchar(10) not null,
+ name varchar(50) not null,
+ email varchar(100) not null unique,
+ foreign key (module_id) references Module (module_id) on update cascade on delete cascade
+);
+
+INSERT INTO Course (course_id, admin_id, name, fee, description) VALUES
+('C001', 'A001', 'CMJD', 300000.00, 'Comprehensive Master Java Developer'),
+('C002', 'A001', 'GDSE', 600000.00, 'Graduate Diploma In Software Engineering'),
+('C003', 'A001', 'DEP', 200000.00, 'Direct Entry Program');
+
+
+INSERT INTO Lecture (lecture_id, module_id, name, email) VALUES
+('L001', 'M001', 'Lecture One', 'lecture1@cmjd.com'),
+('L002', 'M002', 'Lecture Two', 'lecture2@gdse.com'),
+('L003', 'M003', 'Lecture Three', 'lecture3@dep.com'),
+('L004', 'M001', 'Lecture Four', 'lecture4@cmjd.com'),
+('L005', 'M002', 'Lecture Five', 'lecture5@gdse.com'),
+('L006', 'M003', 'Lecture Six', 'lecture6@dep.com');
+
+
+INSERT INTO Module (module_id, course_id, module_name) VALUES
+('M001', 'C001', 'Java Programming'),
+('M002', 'C002', 'Advanced Software Engineering'),
+('M003', 'C003', 'Fundamentals of Programming'),
+('M004', 'C001', 'Database Management'),
+('M005', 'C002', 'Web Development'),
+('M006', 'C003', 'Mobile App Development');
+
+
+INSERT INTO Parent (parent_id, admin_id, name, email) VALUES
+('P001', 'A001', 'Mr. Perera', 'perera@parent.com'),
+('P002', 'A001', 'Mr. Silva', 'silva@parent.com'),
+('P003', 'A001', 'Mr. Kumara', 'kumara@parent.com'),
+('P004', 'A001', 'Mr. Rathnayake', 'rathnayake@parent.com'),
+('P005', 'A002', 'Mr. Dissanayake', 'dissanayake@parent.com'),
+('P006', 'A002', 'Mr. Wickramasinghe', 'wickramasinghe@parent.com');
+
+
+INSERT INTO Payment (payment_id, admin_id, student_id, payment_date, amount) VALUES
+('P001', 'A001', 'S001', '2024-10-01', 300000.00),
+('P002', 'A001', 'S002', '2024-10-02', 600000.00),
+('P003', 'A001', 'S003', '2024-10-03', 200000.00),
+('P004', 'A001', 'S004', '2024-10-04', 300000.00),
+('P005', 'A002', 'S005', '2024-10-05', 600000.00),
+('P006', 'A002', 'S006', '2024-10-06', 200000.00);
+
+
+INSERT INTO Student (student_id, admin_id, parent_id, name, address, dob) VALUES
+('S001', 'A001', 'P001', 'Nimal Perera', '123 Main St', '2000-01-01'),
+('S002', 'A001', 'P002', 'Kamal Silva', '456 Oak Ave', '2001-02-02'),
+('S003', 'A001', 'P003', 'Saman Kumara', '789 Pine St', '2002-03-03'),
+('S004', 'A001', 'P004', 'Tharindu Rathnayake', '101 River Rd', '2000-04-04'),
+('S005', 'A002', 'P005', 'Lakshman Dissanayake', '202 Hilltop Rd', '2001-05-05'),
+('S006', 'A002', 'P006', 'Prasad Wickramasinghe', '303 Ocean Blvd', '2002-06-06');
+
+
+INSERT INTO Staff (staff_id, admin_id, name, email, description, salary) VALUES
+('S001', 'A001', 'Staff One', 'staff1@cmjd.com', 'Teaching Staff', 75000.00),
+('S002', 'A001', 'Staff Two', 'staff2@gdse.com', 'Teaching Staff', 80000.00),
+('S003', 'A001', 'Staff Three', 'staff3@dep.com', 'Non-Teaching Staff', 60000.00),
+('S004', 'A002', 'Staff Four', 'staff4@cmjd.com', 'Admin Staff', 90000.00),
+('S005', 'A002', 'Staff Five', 'staff5@gdse.com', 'IT Staff', 85000.00),
+('S006', 'A002', 'Staff Six', 'staff6@dep.com', 'Finance Staff', 70000.00);
+
+
+INSERT INTO Student_course (student_id, course_id) 
+VALUES 
+    ('S001', 'C001'),
+    ('S002', 'C002'),
+    ('S003', 'C003'),
+    ('S004', 'C001');
+    
+    
+AES ENCRYPT
+
+CREATE TABLE Admin (
+    admin_id VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARBINARY(255) NOT NULL
+);
+
+
+INSERT INTO Admin (admin_id, name, email, password) VALUES
+('A005', 'Kavindu Dilhara', 'dilhara@gmail.com', AES_ENCRYPT('dilhara123', 'your_secret_key')),
+('A001', 'Matheesha Abiman', 'matheeshaabi@gmail.com', AES_ENCRYPT('abiman123', 'your_secret_key')),
+('A002', 'Janith Umayanga', 'janithumayanga@gmail.com', AES_ENCRYPT('janith123', 'your_secret_key')),
+('A003', 'Praveen Rusiru', 'praveenrusi@gmail.com', AES_ENCRYPT('praveen123', 'your_secret_key')),
+('A004', 'Sachinta Navindu', 'sachifnd@gmail.com', AES_ENCRYPT('sachinta123', 'your_secret_key'));
+
+
+SELECT 
+    admin_id, 
+    name, 
+    email, 
+    AES_DECRYPT(password, 'your_secret_key') AS decrypted_password
+FROM Admin;
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1101.0" prefWidth="1500.0" style="-fx-background-color: #227093;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.institute1.controller.LoginController">
+   <children>
+      <ImageView fitHeight="1087.0" fitWidth="1106.0" layoutX="392.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/login.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="555.0" layoutY="231.0" prefHeight="712.0" prefWidth="786.0" style="-fx-background-color: #18dcff; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #006266;" stylesheets="@../Documents/style.css">
+         <children>
+            <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="129.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/email.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="129.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/iconpassw.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="forgotpassTf" alignment="CENTER" contentDisplay="CENTER" layoutX="291.0" layoutY="545.0" onMouseClicked="#clickForgotPass" prefHeight="40.0" prefWidth="244.0" text="Forgot Password?" textFill="#1b1b1b">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="usernameTf" focusColor="BLACK" labelFloat="true" layoutX="165.0" layoutY="219.0" onAction="#enterUsername" prefHeight="40.0" prefWidth="495.0" promptText="User Email" style="-fx-background-radius: 20;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordTf" focusColor="BLACK" labelFloat="true" layoutX="165.0" layoutY="322.0" onAction="#enterPassword" prefHeight="40.0" prefWidth="495.0" promptText="Password" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="loginBtn" layoutX="152.0" layoutY="446.0" onAction="#clickLoginBtn" prefHeight="40.0" prefWidth="495.0" style="-fx-background-color: black; -fx-background-radius: 30; -fx-border-radius: 30;" styleClass="login-Button" stylesheets="@../style/style.css" text="Click to login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="226.0" layoutY="53.0" prefHeight="45.0" prefWidth="334.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #2c3e50;" text="Login" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="98.0" layoutY="24.0" prefHeight="150.0" prefWidth="163.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #22ff00;" />
+      <ImageView fitHeight="132.0" fitWidth="145.0" layoutX="113.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/iconb1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="57.0" layoutY="120.0" prefHeight="264.0" prefWidth="305.0" text="&quot;Welcome to the Admin Portal!&#10;Please log in to manage&#10;your institute efficiently.&#10;Your role is vital in&#10;ensuring smooth operations.&quot;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDateTime" layoutX="1286.0" layoutY="8.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #95a5a6;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="606.0" fitWidth="368.0" layoutX="14.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="166.0" fitWidth="120.0" layoutX="32.0" layoutY="809.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="234.0" fitWidth="170.0" layoutX="179.0" layoutY="772.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="225.0" fitWidth="149.0" layoutX="32.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new3.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

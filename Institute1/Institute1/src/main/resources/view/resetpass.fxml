@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1101.0" prefWidth="1500.0" style="-fx-background-color: #227093;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.institute1.controller.ResetpassController">
+   <children>
+      <ImageView fitHeight="1123.0" fitWidth="1101.0" layoutX="399.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/login.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="590.0" layoutY="110.0" prefHeight="859.0" prefWidth="770.0" style="-fx-background-color: #18dcff; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #006266;">
+         <children>
+            <Label alignment="CENTER" layoutX="218.0" layoutY="69.0" prefHeight="45.0" prefWidth="334.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #2c3e50;" text="Reset Password" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="resetSubmitBtn" layoutX="173.0" layoutY="652.0" onAction="#clickPassResetSubmit" prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: black; -fx-background-radius: 30; -fx-border-radius: 30;" text="Click to submit" textAlignment="CENTER" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="newPassTf" focusColor="BLACK" labelFloat="true" layoutX="173.0" layoutY="386.0" onAction="#enterNewPassword" prefHeight="36.0" prefWidth="462.0" promptText="New Password" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXPasswordField>
+            <JFXPasswordField fx:id="conformPassTf" focusColor="BLACK" labelFloat="true" layoutX="173.0" layoutY="462.0" onAction="#enterConformPassword" prefHeight="36.0" prefWidth="462.0" promptText="Conform Password" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXPasswordField>
+            <JFXTextField fx:id="resetTf" focusColor="BLACK" labelFloat="true" layoutX="173.0" layoutY="308.0" onAction="#enterResetCode" prefHeight="36.0" prefWidth="462.0" promptText="Reset Code">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="135.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/iconpassw.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="135.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/iconpassw.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="135.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/code.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="132.0" fitWidth="145.0" layoutX="127.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/iconb1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="141.0" prefHeight="224.0" prefWidth="262.0" text="&quot;Reset Your Password&#10;Enter your new password&#10;in the fields below.&#10;Make sure it's strong&#10;and meets the criteria.&#10;Click the button&#10;to save your new password.&quot;&#10;&#10;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDateTime" layoutX="1305.0" layoutY="7.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #95a5a6;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="20.0" prefHeight="150.0" prefWidth="163.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #22ff00;" />
+      <ImageView fitHeight="606.0" fitWidth="368.0" layoutX="19.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="166.0" fitWidth="120.0" layoutX="30.0" layoutY="804.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="234.0" fitWidth="170.0" layoutX="177.0" layoutY="767.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="225.0" fitWidth="149.0" layoutX="30.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new3.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

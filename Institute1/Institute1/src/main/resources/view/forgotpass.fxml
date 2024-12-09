@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1101.0" prefWidth="1500.0" style="-fx-background-color: #227093;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.institute1.controller.ForgotpassController">
+   <children>
+      <ImageView fitHeight="1112.0" fitWidth="1128.0" layoutX="388.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/login.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="557.0" layoutY="104.0" prefHeight="868.0" prefWidth="800.0" style="-fx-background-color: #18dcff; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #006266; -fx-border-width: 4;">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="200.0" layoutX="363.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/sec2.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="emailTf" focusColor="BLACK" labelFloat="true" layoutX="204.0" layoutY="383.0" onAction="#enterEmail" prefHeight="36.0" prefWidth="433.0" promptText="Email">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="29.0" fitWidth="34.0" layoutX="164.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/email.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="forgotBtn" layoutX="169.0" layoutY="609.0" onAction="#clickForgotBtn" prefHeight="36.0" prefWidth="462.0" style="-fx-background-color: black; -fx-border-radius: 30; -fx-background-radius: 30;" text="Click to submit" textAlignment="CENTER" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="233.0" layoutY="168.0" prefHeight="45.0" prefWidth="334.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #2c3e50;" text="Forgot Password" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="73.0" layoutY="64.0" prefHeight="371.0" prefWidth="280.0" text="&quot;Forgot Your Password?&#10;No worries!&#10;Please enter your registered&#10;email address below,&#10;and we will send you&#10;instructions to&#10;reset your password.&quot;&#10;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="132.0" fitWidth="145.0" layoutX="118.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/iconb1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDateTime" layoutX="1305.0" layoutY="6.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #95a5a6;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="17.0" prefHeight="150.0" prefWidth="163.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #22ff00;" />
+      <ImageView fitHeight="606.0" fitWidth="368.0" layoutX="7.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="166.0" fitWidth="120.0" layoutX="18.0" layoutY="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="234.0" fitWidth="170.0" layoutX="165.0" layoutY="763.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="225.0" fitWidth="149.0" layoutX="18.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new3.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

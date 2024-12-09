@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1033.0" prefWidth="1200.0" style="-fx-background-color: #22a6b3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.institute1.controller.LectureController">
+   <children>
+      <Label layoutX="112.0" layoutY="99.0" prefHeight="26.0" prefWidth="112.0" text="Lecture ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="460.0" layoutY="99.0" prefHeight="26.0" prefWidth="112.0" text="Module ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="149.0" prefHeight="26.0" prefWidth="112.0" text="Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLectureId" layoutX="224.0" layoutY="97.0" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" textFill="#0b4a3d">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="lblModuleId" layoutX="570.0" layoutY="97.0" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <TextField fx:id="lblLectureName" layoutX="224.0" layoutY="146.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="112.0" layoutY="196.0" prefHeight="26.0" prefWidth="112.0" text="Email">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblLectureEmail" layoutX="224.0" layoutY="194.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <TableView fx:id="lectureTable" layoutX="10.0" layoutY="238.0" prefHeight="726.0" prefWidth="1181.0" style="-fx-background-color: #22ff00; -fx-background-radius: 20; -fx-border-width: 4; -fx-border-radius: 20; -fx-border-color: #006266;">
+         <columns>
+            <TableColumn fx:id="colLectureId" prefWidth="125.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Lecture ID" />
+            <TableColumn fx:id="colModuleID" prefWidth="136.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Module ID" />
+            <TableColumn fx:id="colLectureName" prefWidth="419.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Name" />
+            <TableColumn fx:id="colLectureEmail" prefWidth="500.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Email" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnReset" layoutX="601.0" layoutY="971.0" mnemonicParsing="false" onAction="#lectureReset" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #22ff00; -fx-border-width: 2; -fx-border-color: black; -fx-background-radius: 30; -fx-border-radius: 30;" text="Reset">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="751.0" layoutY="971.0" mnemonicParsing="false" onAction="#lectureDelete" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #22ff00; -fx-border-width: 2; -fx-border-color: black; -fx-background-radius: 30; -fx-border-radius: 30;" text="Delete">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="899.0" layoutY="971.0" mnemonicParsing="false" onAction="#lectureUpdate" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #22ff00; -fx-border-width: 2; -fx-border-color: black; -fx-background-radius: 30; -fx-border-radius: 30;" text="Update">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSave" layoutX="1046.0" layoutY="971.0" mnemonicParsing="false" onAction="#lectureSave" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #22ff00; -fx-border-width: 2; -fx-border-color: black; -fx-background-radius: 30; -fx-border-radius: 30;" text="Save">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblDateTime" layoutX="989.0" layoutY="20.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #22a6b3;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="544.0" layoutY="12.0" prefHeight="56.0" prefWidth="193.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #22ff00;" text="       LECTURE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="559.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="554.0" layoutY="19.0" prefHeight="42.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-color: #04dfff; -fx-border-radius: 30; -fx-border-width: 3;" />
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="559.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/lecture.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

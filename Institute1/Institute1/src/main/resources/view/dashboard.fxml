@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1101.0" prefWidth="1500.0" style="-fx-background-color: #227093;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.institute1.controller.DashboardController">
+   <children>
+      <VBox layoutX="56.0" layoutY="132.0" prefHeight="822.0" prefWidth="197.0" spacing="50.0" style="-fx-background-color: #227093;">
+         <children>
+            <Label fx:id="lblAdmin" onMouseClicked="#navigateToAdminPage" prefHeight="56.0" prefWidth="204.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-border-color: #22ff00; -fx-border-width: 4;" text="           Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStudent" onMouseClicked="#navigateToStudentPage" prefHeight="56.0" prefWidth="208.0" style="-fx-background-radius: 20; -fx-border-color: #22ff00; -fx-border-radius: 20; -fx-border-width: 4;" text="           Students" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLecture" onMouseClicked="#navigateToLecturePage" prefHeight="56.0" prefWidth="322.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 4; -fx-border-color: #22ff00;" text="           Lecture" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStaff" onMouseClicked="#navigateToStaffPage" prefHeight="56.0" prefWidth="312.0" style="-fx-background-radius: 20; -fx-border-color: #22ff00; -fx-border-radius: 20; -fx-border-width: 4;" text="           Staff" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblParents" onMouseClicked="#navigateToParentPage" prefHeight="56.0" prefWidth="313.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 4; -fx-border-color: #22ff00;" text="           Parents" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCourse" onMouseClicked="#navigateToCoursePage" prefHeight="56.0" prefWidth="317.0" style="-fx-border-color: #22ff00; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 4;" text="           Course" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblModules" onMouseClicked="#navigateToModulePage" prefHeight="56.0" prefWidth="318.0" style="-fx-background-radius: 20; -fx-border-color: #22ff00; -fx-border-radius: 20; -fx-border-width: 4;" text="           Modules" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPayment" onMouseClicked="#navigateToPaymentPage" prefHeight="56.0" prefWidth="204.0" style="-fx-background-radius: 20; -fx-border-color: #22ff00; -fx-border-radius: 20; -fx-border-width: 4;" text="           Payment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="LblStudentCourse" onMouseClicked="#navigateToStudentCoursePage" prefHeight="56.0" prefWidth="205.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 4; -fx-border-color: #22ff00;" text="          S_C Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="content2" layoutX="300.0" prefHeight="1087.0" prefWidth="1106.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="content" prefHeight="1033.0" prefWidth="1200.0" style="-fx-background-color: #192a56;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="67.0" layoutY="720.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/modulesi2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="67.0" layoutY="815.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/paymenti.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="68.0" layoutY="622.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/coursei.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="67.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/staffi.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="67.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/studenti.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="67.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/parenti.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="67.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/admini.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="67.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/lecture.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="60.0" layoutY="136.0" prefHeight="38.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: #04dfff;" />
+      <Label layoutX="61.0" layoutY="232.0" prefHeight="38.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: #04dfff;" />
+      <Label layoutX="61.0" layoutY="717.0" prefHeight="38.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: #04dfff;" />
+      <Label layoutX="61.0" layoutY="620.0" prefHeight="38.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: #04dfff;" />
+      <Label layoutX="61.0" layoutY="523.0" prefHeight="38.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: #04dfff;" />
+      <Label layoutX="61.0" layoutY="426.0" prefHeight="38.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: #04dfff;" />
+      <Label layoutX="61.0" layoutY="329.0" prefHeight="38.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: #04dfff;" />
+      <Label layoutX="61.0" layoutY="814.0" prefHeight="38.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 3; -fx-border-color: #04dfff;" />
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="554.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="68.0" layoutY="914.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/detailicon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="911.0" prefHeight="38.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-color: #04dfff; -fx-border-radius: 30; -fx-border-width: 3;" />
+      <Label layoutX="99.0" layoutY="16.0" prefHeight="100.0" prefWidth="108.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-border-width: 4; -fx-border-color: #22ff00; -fx-background-color: #ffffff;" />
+      <ImageView fitHeight="71.0" fitWidth="68.0" layoutX="118.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/new2.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnExit" layoutX="76.0" layoutY="975.0" mnemonicParsing="false" onAction="#navegateToExit" prefHeight="36.0" prefWidth="153.0" style="-fx-background-color: #00ffd9; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #bd00ff; -fx-border-width: 3;" text="Exit">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

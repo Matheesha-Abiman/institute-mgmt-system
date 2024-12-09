@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="studentCoursePanel" prefHeight="1033.0" prefWidth="1200.0" style="-fx-background-color: #22a6b3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.institute1.controller.StudentCourseController">
+   <children>
+      <TableView fx:id="tableStudentCourse" layoutX="10.0" layoutY="90.0" prefHeight="918.0" prefWidth="620.0" style="-fx-background-color: #22ff00; -fx-background-radius: 20; -fx-border-width: 4; -fx-border-radius: 10; -fx-border-color: #006266;">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="295.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Student ID" />
+          <TableColumn fx:id="colCourseId" prefWidth="320.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Course ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="494.0" layoutY="14.0" prefHeight="56.0" prefWidth="242.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #22ff00;" text="       S_C DETAILS">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="502.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="502.0" layoutY="21.0" prefHeight="42.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-color: #04dfff; -fx-border-radius: 30; -fx-border-width: 3;" />
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="510.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/detailicon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDateTime" layoutX="1004.0" layoutY="10.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #22a6b3;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="pieChart" layoutX="647.0" layoutY="112.0" prefHeight="627.0" prefWidth="539.0" style="-fx-background-color: #22a6b3;" />
+   </children>
+</AnchorPane>

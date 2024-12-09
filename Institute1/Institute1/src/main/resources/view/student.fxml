@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="studentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1033.0" prefWidth="1200.0" style="-fx-background-color: #22a6b3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.institute1.controller.StudentController">
+   <children>
+      <Label layoutX="518.0" layoutY="98.0" prefHeight="26.0" prefWidth="99.0" text="Admin ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="98.0" prefHeight="26.0" prefWidth="99.0" text="Student ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="151.0" prefHeight="26.0" prefWidth="99.0" text="Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudentId" layoutX="218.0" layoutY="96.0" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" textFill="#0b4a3d">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="lblAdminId" layoutX="629.0" layoutY="96.0" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 2; -fx-border-color: black;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <TextField fx:id="lblStudentName" layoutX="218.0" layoutY="149.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <TableView fx:id="studentTable" layoutX="10.0" layoutY="294.0" prefHeight="670.0" prefWidth="1181.0" style="-fx-background-color: #22ff00; -fx-background-radius: 20; -fx-border-radius: 10; -fx-border-color: #006266; -fx-border-width: 4;">
+         <columns>
+            <TableColumn fx:id="colStudentId" prefWidth="111.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Student ID" />
+            <TableColumn fx:id="colAdminId" prefWidth="126.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Admin ID" />
+            <TableColumn fx:id="colParentId" prefWidth="142.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Parent ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="282.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Name" />
+            <TableColumn fx:id="colStudentAddress" prefWidth="341.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Address" />
+            <TableColumn fx:id="colStudentDOB" prefWidth="178.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="DOB" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnReset" layoutX="601.0" layoutY="971.0" mnemonicParsing="false" onAction="#studentReset" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #00ff04; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" text="Reset">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="751.0" layoutY="971.0" mnemonicParsing="false" onAction="#studentDelete" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #00ff04; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" text="Delete">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="899.0" layoutY="971.0" mnemonicParsing="false" onAction="#studentUpdate" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #00ff04; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2; -fx-background-radius: 30;" text="Update">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSave" layoutX="1046.0" layoutY="971.0" mnemonicParsing="false" onAction="#studentSave" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #00ff04; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" text="Save">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="923.0" layoutY="98.0" prefHeight="26.0" prefWidth="99.0" text="Parent ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblParentId" layoutX="1031.0" layoutY="96.0" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #a7e0f6; -fx-border-color: black; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="112.0" layoutY="196.0" prefHeight="26.0" prefWidth="99.0" text="Address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblStudentAddress" layoutX="218.0" layoutY="194.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="112.0" layoutY="242.0" prefHeight="26.0" prefWidth="99.0" text="DOB">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblStudentDOB" layoutX="218.0" layoutY="240.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: #a7e0f6; -fx-border-color: black; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label fx:id="lblDateTime" layoutX="1004.0" layoutY="10.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #22a6b3;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="539.0" layoutY="10.0" prefHeight="56.0" prefWidth="202.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #22ff00;" text="       STUDENT">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="547.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="547.0" layoutY="17.0" prefHeight="42.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-color: #04dfff; -fx-border-radius: 30; -fx-border-width: 3;" />
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="555.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/studenti.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="combo" focusColor="BLACK" labelFloat="true" layoutX="973.0" layoutY="180.0" onAction="#combo" prefHeight="24.0" prefWidth="176.0" promptText="   Select Course" style="-fx-background-color: #22a6b3; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2; -fx-font-size: 14;" unFocusColor="BLACK" />
+      <ComboBox layoutX="629.0" layoutY="96.0" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" />
+      <ComboBox layoutX="1031.0" layoutY="95.0" prefHeight="32.0" prefWidth="60.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" />
+   </children>
+</AnchorPane>

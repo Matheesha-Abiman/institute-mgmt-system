@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" style="-fx-background-color: #a7e0f4;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.institute1.controller.WelcomeController">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1101.0" layoutX="300.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/welcome.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rctMain" arcHeight="5.0" arcWidth="5.0" fill="#9ed0ff" height="15.0" layoutX="378.0" layoutY="798.0" stroke="BLACK" strokeType="INSIDE" width="786.0" />
+      <Rectangle fx:id="rctSub" arcHeight="5.0" arcWidth="5.0" fill="#223780" height="15.0" layoutX="378.0" layoutY="798.0" stroke="BLACK" strokeType="INSIDE" width="56.0" />
+      <Label layoutX="734.0" layoutY="772.0" prefHeight="18.0" prefWidth="75.0" text="Loading" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPercentage" layoutX="820.0" layoutY="773.0" text="3%" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

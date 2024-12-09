@@ -1,0 +1,112 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="StaffDetailsNewReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6781b86a-c60a-4470-83d6-134bcd474ecf">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="InstituteDBConnection"/>
+	<query language="SQL"><![CDATA[SELECT * FROM Staff]]></query>
+	<field name="staff_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="staff_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="staff_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Staff"/>
+	</field>
+	<field name="admin_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="admin_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="admin_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Staff"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Staff"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Staff"/>
+	</field>
+	<field name="description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="description"/>
+		<property name="com.jaspersoft.studio.field.label" value="description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Staff"/>
+	</field>
+	<field name="salary" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="salary"/>
+		<property name="com.jaspersoft.studio.field.label" value="salary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Staff"/>
+	</field>
+	<variable name="name1" resetType="Column" calculation="DistinctCount" class="java.lang.Integer">
+		<expression><![CDATA[$F{name}]]></expression>
+	</variable>
+	<variable name="staff_id1" resetType="Column" calculation="DistinctCount" class="java.lang.Integer">
+		<expression><![CDATA[$F{staff_id}]]></expression>
+	</variable>
+	<variable name="admin_id1" resetType="Column" calculation="DistinctCount" class="java.lang.Integer">
+		<expression><![CDATA[$F{admin_id}]]></expression>
+	</variable>
+	<variable name="name2" resetType="Column" calculation="DistinctCount" class="java.lang.Integer">
+		<expression><![CDATA[$F{name}]]></expression>
+	</variable>
+	<variable name="staff_id2" resetType="Column" calculation="Count" class="java.lang.Integer">
+		<expression><![CDATA[$F{staff_id}]]></expression>
+	</variable>
+	<variable name="admin_id2" resetType="Column" calculation="Count" class="java.lang.Integer">
+		<expression><![CDATA[$F{admin_id}]]></expression>
+	</variable>
+	<variable name="name3" resetType="Column" calculation="Count" class="java.lang.Integer">
+		<expression><![CDATA[$F{name}]]></expression>
+	</variable>
+	<background splitType="Stretch"/>
+	<title height="80" splitType="Stretch">
+		<element kind="staticText" uuid="6e36d524-ffcb-4288-b476-66ef1401d5dd" x="17" y="0" width="520" height="37" fontSize="26.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Institute Management System]]></text>
+		</element>
+		<element kind="staticText" uuid="87773880-4553-4b90-84d4-5fe13d21515c" x="115" y="50" width="324" height="30" fontSize="20.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Staff Payment Details]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="43" splitType="Stretch">
+		<element kind="staticText" uuid="14bc2ed2-eebd-4aa0-9463-e8b419365f81" x="-20" y="0" width="80" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Staff ID]]></text>
+		</element>
+		<element kind="staticText" uuid="ebbcc58c-86c0-4bbd-974a-b6d59993eb8a" x="60" y="0" width="80" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Admin ID]]></text>
+		</element>
+		<element kind="staticText" uuid="de85abab-f074-479b-9de7-351a20044a76" x="140" y="0" width="100" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Name]]></text>
+		</element>
+		<element kind="staticText" uuid="7cb00112-e2df-4ff4-ad10-e738b6615f0d" x="240" y="0" width="130" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Email]]></text>
+		</element>
+		<element kind="staticText" uuid="76b8c625-8758-4a71-8607-2f2040a867ff" x="370" y="0" width="110" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Description]]></text>
+		</element>
+		<element kind="staticText" uuid="0c2edbd0-a3dc-4ca9-bdb8-ba232b988dfd" x="480" y="0" width="95" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Salary]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<element kind="textField" uuid="39402ca1-751f-472e-a04c-5e2485355a84" x="-18" y="3" width="78" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{staff_id}]]></expression>
+			</element>
+			<element kind="textField" uuid="7feec277-8efe-41d2-b8c8-b0ae3eaa54db" x="61" y="3" width="78" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{admin_id}]]></expression>
+			</element>
+			<element kind="textField" uuid="54465e37-311e-44d8-b0ae-1bff68de1e14" x="140" y="3" width="100" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{name}]]></expression>
+			</element>
+			<element kind="textField" uuid="23fe6af9-a7df-494a-be08-3710fa2ff2ce" x="240" y="3" width="130" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{email}]]></expression>
+			</element>
+			<element kind="textField" uuid="161b1427-ed78-451f-9c4e-fbfccdca105f" x="370" y="0" width="110" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{description}]]></expression>
+			</element>
+			<element kind="textField" uuid="30df2ece-5c60-468a-bbcf-2e5a0b58dcf1" x="480" y="0" width="95" height="30" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{salary}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

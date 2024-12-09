@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1033.0" prefWidth="1200.0" style="-fx-background-color: #22a6b3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.institute1.controller.StaffController">
+   <children>
+      <Label layoutX="524.0" layoutY="104.0" prefHeight="26.0" prefWidth="110.0" text="Admin ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="104.0" prefHeight="26.0" prefWidth="110.0" text="Staff ID">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="196.0" prefHeight="26.0" prefWidth="110.0" text="Email">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStaffId" layoutX="244.0" layoutY="107.0" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" textFill="#0b4a3d">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="lblAdminId" layoutX="639.0" layoutY="107.0" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <TextField fx:id="lblStaffEmail" layoutX="244.0" layoutY="194.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <TableView fx:id="StaffTable" layoutX="10.0" layoutY="332.0" prefHeight="628.0" prefWidth="1181.0" style="-fx-background-color: #00ff04; -fx-background-radius: 20; -fx-border-width: 4; -fx-border-radius: 10; -fx-border-color: #006266;">
+         <columns>
+            <TableColumn fx:id="colStaffId" prefWidth="95.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Staff ID" />
+            <TableColumn fx:id="colAdminId" prefWidth="113.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Admin ID" />
+            <TableColumn fx:id="colStaffName" prefWidth="218.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Name" />
+            <TableColumn fx:id="colStaffEmail" prefWidth="273.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Email" />
+            <TableColumn fx:id="colStaffDesc" prefWidth="252.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Description" />
+            <TableColumn fx:id="colStaffSalary" prefWidth="225.0" style="-fx-background-color: #83dbee; -fx-font-size: 16; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.5; -fx-border-color: black;" text="Salary" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnReset" layoutX="601.0" layoutY="971.0" mnemonicParsing="false" onAction="#staffReset" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #00ff04; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 30; -fx-background-radius: 30;" text="Reset">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="751.0" layoutY="971.0" mnemonicParsing="false" onAction="#staffDelete" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #00ff04; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 30; -fx-background-radius: 30;" text="Delete">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="899.0" layoutY="971.0" mnemonicParsing="false" onAction="#staffUpdate" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #00ff04; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 30; -fx-background-radius: 30;" text="Update">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSave" layoutX="1046.0" layoutY="971.0" mnemonicParsing="false" onAction="#staffSave" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #00ff04; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 30; -fx-background-radius: 30;" text="Save">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="112.0" layoutY="155.0" prefHeight="26.0" prefWidth="110.0" text="Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblStaffName" layoutX="244.0" layoutY="153.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="112.0" layoutY="239.0" prefHeight="26.0" prefWidth="110.0" text="Description">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblStaffDesc" layoutX="244.0" layoutY="235.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="112.0" layoutY="277.0" prefHeight="26.0" prefWidth="110.0" text="Salary">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblStaffSalary" layoutX="244.0" layoutY="275.0" prefHeight="30.0" prefWidth="687.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <Label fx:id="lblDateTime" layoutX="999.0" layoutY="11.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #22a6b3;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="546.0" layoutY="14.0" prefHeight="56.0" prefWidth="186.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-border-width: 4; -fx-border-color: #22ff00;" text="        STAFF">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="554.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="562.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/staffi.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="554.0" layoutY="21.0" prefHeight="42.0" prefWidth="50.0" style="-fx-background-radius: 50; -fx-border-color: #04dfff; -fx-border-radius: 30; -fx-border-width: 3;" />
+      <Button fx:id="btnGenarateReport" layoutX="439.0" layoutY="971.0" mnemonicParsing="false" onAction="#report" prefHeight="40.0" prefWidth="155.0" style="-fx-background-color: #487eb0; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 30; -fx-background-radius: 30;" text="Staff Report">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <ComboBox layoutX="639.0" layoutY="107.0" prefHeight="32.0" prefWidth="70.0" style="-fx-background-color: #a7e0f6; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30; -fx-border-width: 2;" />
+   </children>
+</AnchorPane>
